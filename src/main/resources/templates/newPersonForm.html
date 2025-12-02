@@ -10,6 +10,7 @@
 <body>
 <h1>Add new person</h1>
 <form method="POST" th:object="${newPerson}" th:action="@{/persons/save}">
+    <input type="hidden" th:field="*{id}"/>
     <div class="mb-3">
         <label for="exampleFirstName" class="form-label">First name</label>
         <input type="text" class="form-control" id="exampleFirstName"
